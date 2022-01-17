@@ -1,6 +1,14 @@
 package jp.ac.uryukyu.ie.e215736;
-
+/**
+ * ゲームルールクラス。
+ */
 public class GameRule {
+    /**
+     * プレイヤーが入力した数とランダム生成した数を比較してEATの数をカウントするメソッド
+     * @param opNumber　ランダム生成によって作った数
+     * @param plNumber  プレイヤーが入力した数
+     * @return EATの数
+     */
     public static int countEat(String opNumber, String plNumber) {
         int countE = 0;
         for (int i = 0; i < opNumber.length(); i++) {
@@ -11,6 +19,12 @@ public class GameRule {
         return countE;
     }
 
+    /**
+     * プレイヤーが入力した数とランダム生成した数を比較してBITEの数をカウントするメソッド
+     * @param opNumber ランダム生成によって作った数
+     * @param plNumber プレイヤーが入力した数
+     * @return BITEの数
+     */
     public static int countBite(String opNumber, String plNumber) {
 
         int countB = 0;

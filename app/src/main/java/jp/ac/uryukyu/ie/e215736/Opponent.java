@@ -3,18 +3,34 @@ package jp.ac.uryukyu.ie.e215736;
 import java.util.Collections;
 import java.util.ArrayList;
 
+/**
+ * 対戦相手クラス
+ *  String name; //敵の名前
+ */
 public class Opponent {
     private String name;
 
     public Opponent(String name) {
+        /**
+         * コンストラクタ。名前を指定する。
+         * ＠param name 敵の名前
+         */
         this.name = name;
     }
 
+      /**
+     * 保持する名前を返します。
+     * @return 名前
+     */
     public String getName() {
         return name;
     }
 
-    // ランダムで重複なしの数字３桁生成
+    /**
+     * ランダムで重複なしの数字３桁を生成するメソッド。
+     * 呼び出すごとに数字が変わる。
+     * @return 重複無しの数字３桁
+     * */
     public static String createNumber() {
         ArrayList<Integer> list = new ArrayList<Integer>();
         int answer = 0;
