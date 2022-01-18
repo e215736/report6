@@ -17,13 +17,13 @@ public class Input {
         String input_text = "";
         int firstSkip = 0;
         do {
-            if (firstSkip > 0) {
+            if (firstSkip > 0)  {
                 System.out.print(" !入力に誤りがあります。指定通りに数字を入力してください! > ");
             }
             input_text = scanner.nextLine();
             firstSkip += 1;
 
-        } while ((input_text.length() != 3) & (Pattern.matches("^[0-9]{3}", input_text) != true));
+        } while ((input_text.isEmpty() == true) || (input_text.length() != 3) || ( input_text.getBytes().length != input_text.length()) && (Pattern.matches("^[0-9]{3}", input_text) != true));
         return input_text;
     }
 }
